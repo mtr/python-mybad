@@ -5,7 +5,6 @@
 
 import os
 import setuptools
-import setupextras
 
 # DISABLED/BUG: this line fails when `pip install mybad` but works `pip install .`
 # from mybad import __version__
@@ -32,10 +31,16 @@ keywords = [
     'stacktrace',
 ]
 
-packages = setupextras.get_packages()
-data_files = setupextras.get_data_files(['*.*'], os.path.join(name, 'tests', '__fixtures__'))
-requirements = setupextras.get_requirements()
-readme = setupextras.get_readme()
+packages = setuptools.find_packages(".")
+requirements = [
+    "six >= 1.12.0",
+    "rootpath @ git+https://github.com/reuben/python-rootpath.git@ced47237c25d39868d3ceb91af1f48b702469c99#egg=rootpath",
+    "inspecta @ git+https://github.com/reuben/python-inspecta.git@afc1e0c15d3c1ec714371e757388312606d43dc2#egg=inspecta",
+    "attributedict @ git+https://github.com/reuben/python-attributedict.git@2e6f63a206e8fef2725d24c72e712bad86174501#egg=attributedict",
+    "termcolor >= 1.1.0",
+]
+with open("README.md") as fin:
+    readme = ''.join(fin.readlines())
 
 config = {
     'name': name,
@@ -81,7 +86,6 @@ config = {
             '*.*',
         ],
     },
-    'data_files': data_files,
     'include_package_data': True,
     'zip_safe': True,
 
