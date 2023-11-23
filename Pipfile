@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+six = ">=1.12.0"
+rootpath = { ref = "ced47237c25d39868d3ceb91af1f48b702469c99", git = "git+https://github.com/reuben/python-rootpath.git" }
+inspecta = { ref = "afc1e0c15d3c1ec714371e757388312606d43dc2", git = "git+https://github.com/reuben/python-inspecta.git" }
+attributedict = { ref = "2e6f63a206e8fef2725d24c72e712bad86174501", git = "git+https://github.com/reuben/python-attributedict.git" }
+termcolor = ">=1.1.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

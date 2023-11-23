@@ -1,5 +1,0 @@
-six >= 1.12.0
-rootpath >= 0.1.1
-inspecta >= 0.1.3
-attributedict >= 0.3.0
-termcolor >= 1.1.0

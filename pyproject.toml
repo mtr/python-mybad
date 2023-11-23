@@ -1,3 +1,58 @@
 [build-system]
-requires = ["setuptools"]
+requires = [
+    "setuptools",
+    "setuptools-git",
+    "setupextras",
+    "tox",
+    "tox-travis"
+]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "mybad"
+version = "0.3.0"
+description = "My friendly error base class - for Python."
+keywords = [
+    "error",
+    "errors",
+    "baseclass",
+    "meta",
+    "debug",
+    "inspector",
+    "pretty",
+    "color",
+    "colors",
+    "detailed",
+    "stacktrace",
+]
+authors = [
+    { name = "Jonas Grimfelt", email = "grimen@gmail.com" }
+]
+maintainers = [
+    { name = "Martin Thorsen Ranang", email = "mtr@ranang.org" }
+]
+readme = "README.md"
+license = { file = "MIT-LICENSE" }
+dynamic = [
+    "dependencies",
+    "optional-dependencies",
+]
+classifiers = [
+    "Topic :: Software Development :: Libraries",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 2",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+[project.urls]
+url = "https://github.com/grimen/python-mybad"
+download_url = "https://github.com/grimen/python-mybad"
+
+"Homepage" = "https://github.com/grimen/python-mybad"
+"Bug Tracker" = "https://github.com/grimen/python-mybad/issues"
